@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Char</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -183,13 +183,13 @@
                     <!-- عرض الجدول على الشاشات الكبيرة -->
                     <div class="hidden md:block">
                         <table class="w-full text-right rounded-lg">
-                            <thead class="bg-gray-100 rounded-lg">
+                            <thead class="rounded-lg">
                                 <tr>
-                                    <th class="p-4 border-b">المنتج</th>
-                                    <th class="p-4 border-b">السعر</th>
-                                    <th class="p-4 border-b">الكمية</th>
-                                    <th class="p-4 border-b">الإجمالي</th>
-                                    <th class="p-4 border-b">حذف</th>
+                                    <th class="p-2 border-b pr-7">المنتج</th>
+                                    <th class="p-2 border-b text-center">السعر</th>
+                                    <th class="p-2 border-b text-center">الكمية</th>
+                                    <th class="p-2 border-b text-center">الإجمالي</th>
+                                    <th class="p-2 border-b text-center">حذف</th>
                                 </tr>
                             </thead>
                             <tbody class="text-xs">
@@ -198,15 +198,18 @@
                                         <div class="w-16 h-16 bg-gray-300"></div>
                                         <span>منتج 1</span>
                                     </td>
-                                    <td class="p-4">$14.00</td>
+                                    <td class="p-4 text-center">$14.00</td>
                                     <td class="p-4">
-                                        <div class="flex w-fit items-center border border-gray-300 rounded-full p-1">
-                                            <button onclick="decreaseQuantity()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">-</button>
-                                            <span id="quantity" class="mx-4">1</span>
-                                            <button onclick="increaseQuantity()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">+</button>
+                                        <div class="flex justify-center items-center">
+                                            <div class="flex w-fit items-center justify-center border border-gray-300 rounded-full p-1">
+                                                <button onclick="decreaseQuantity()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">-</button>
+                                                <span id="quantity" class="mx-4">1</span>
+                                                <button onclick="increaseQuantity()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">+</button>
+                                            </div>
                                         </div>
+                                        
                                     </td>
-                                    <td class="p-4">$70.00</td>
+                                    <td class="p-4 text-center">$70.00</td>
                                     <td class="p-4 text-center text-red-500 cursor-pointer">❌</td>
                                 </tr>
                                 <tr class="border-b">
@@ -214,15 +217,18 @@
                                         <div class="w-16 h-16 bg-gray-300"></div>
                                         <span>منتج 2</span>
                                     </td>
-                                    <td class="p-4">$14.00</td>
-                                    <td class="p-4">
-                                        <div class="flex w-fit items-center border border-gray-300 rounded-full p-1">
-                                            <button onclick="decreaseQuantity1()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">-</button>
-                                            <span id="quantity1" class="mx-4">1</span>
-                                            <button onclick="increaseQuantity1()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">+</button>
+                                    <td class="p-4 text-center">$14.00</td>
+                                    <td class="p-4 text-center">
+                                        <div class="flex justify-center items-center">
+                                            <div class="flex w-fit items-center border border-gray-300 rounded-full p-1">
+                                                <button onclick="decreaseQuantity1()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">-</button>
+                                                <span id="quantity1" class="mx-4">1</span>
+                                                <button onclick="increaseQuantity1()" class="w-7 h-7 bg-[#F2F2F2] hover:bg-[#E8E6E6] transition-all font-bold rounded-full flex items-center justify-center text-gray-500">+</button>
+                                            </div>
                                         </div>
+                                        
                                     </td>
-                                    <td class="p-4">$14.00</td>
+                                    <td class="p-4 text-center">$14.00</td>
                                     <td class="p-4 text-center text-red-500 cursor-pointer">❌</td>
                                 </tr>
                             </tbody>
@@ -272,7 +278,7 @@
                 </div>
             
                 <!-- buttons -->
-                <div class="flex flex-col md:flex-row justify-between gap-2 w-full">
+                <div class="flex flex-col md:flex-row justify-between gap-2 w-full text-xs">
                     <button class="bg-gray-200 px-6 py-2 rounded-full w-full md:w-auto">العودة إلى المتجر</button>
                     <button class="bg-gray-300 px-6 py-2 rounded-full w-full md:w-auto">تحديث السلة</button>
                 </div>
@@ -294,7 +300,7 @@
 
                 <div class="divide-y divide-gray-300">
                     <div class="text-sm flex justify-between px-1 py-2">
-                        <p>المجموع:</p>
+                        <p>الإجمالي الفرعي:</p>
                         <p>$84.00</p>
                     </div>
 
@@ -302,9 +308,9 @@
                         <p>الشحن:</p>
                         <p>مجاني</p>
                     </div>
-                    <div class="text-md flex justify-between px-1 py-2">
-                        <p>المجموع الكلي:</p>
-                        <p class="font-semibold">$84.00</p>
+                    <div class="text-md flex justify-between px-1 py-2 font-semibold">
+                        <p>الإجمالي:</p>
+                        <p>$84.00</p>
                     </div>
                     
                     
@@ -313,7 +319,7 @@
 
                 <!-- button -->
                 <div class="flex justify-center items-center">
-                    <a href="" class="bg-[#C190BD] hover:bg-[#B087AC] transition-all rounded-full w-full py-2 text-sm text-white cursor-pointer text-center">الذهاب للدفع</a>
+                    <a href="./Payment.html" class="bg-[#C190BD] hover:bg-[#B087AC] transition-all rounded-full w-full py-2 text-sm text-white cursor-pointer text-center">الذهاب للدفع</a>
                 </div>
             </div>
 

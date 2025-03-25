@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Payment</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -37,10 +37,10 @@
 
         <!-- Navigation Links (Hidden on Mobile) -->
         <nav class="hidden md:flex gap-8 items-center px-3 text-[#170F49]">
-            <a href="./Home.html" class="hover:border-b-2 transition-all border-[#170F49]">الرئيسية</a>
+            <a href="./Home.html" class="font-bold border-b-2 border-[#170F49]">الرئيسية</a>
             <a href="./About.html" class="hover:border-b-2 transition-all border-[#170F49]">حول</a>
             <a href="./Shop.html" class="hover:border-b-2 transition-all border-[#170F49]">المتجر</a>
-            <a href="./Contact.html" class="font-bold border-b-2 border-[#170F49]">تواصل</a>
+            <a href="./Contact.html" class="hover:border-b-2 transition-all border-[#170F49]">تواصل</a>
         </nav>
 
         <!-- Logo -->
@@ -50,7 +50,7 @@
 
         <!-- the Panier button, just will appear in mobile -->
         <div class="relative md:hidden flex">
-            <a href="">
+            <a href="./Char.html">
                 <svg width="20" height="21" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M8.33333 10.6667H4.08333L1.25 26.25H26.75L23.9167 10.6667H19.6667M8.33333 10.6667V6.41667C8.33333 3.28705 10.8704 0.75 14 0.75V0.75C17.1296 0.75 19.6667 3.28705 19.6667 6.41667V10.6667M8.33333 10.6667H19.6667M8.33333 10.6667V14.9167M19.6667 10.6667V14.9167"
@@ -84,7 +84,7 @@
 
             <!-- the Panier button -->
             <div class="relative">
-                <a href="./Char.html">
+                <a href="">
                     <svg width="20" height="21" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8.33333 10.6667H4.08333L1.25 26.25H26.75L23.9167 10.6667H19.6667M8.33333 10.6667V6.41667C8.33333 3.28705 10.8704 0.75 14 0.75V0.75C17.1296 0.75 19.6667 3.28705 19.6667 6.41667V10.6667M8.33333 10.6667H19.6667M8.33333 10.6667V14.9167M19.6667 10.6667V14.9167"
@@ -172,51 +172,108 @@
 
     </div>
 
-    <div>
-        
+    <div class="flex flex-col justify-center items-center py-20 w-full">
 
-        <!-- How can we help you? -->
-        <div class="flex flex-col gap-7 items-center justify-center md:py-20 md:pb-28 py-10 px-5 bg-[#F6F8F7] my-20 md:">
-
-            <!-- text -->
-            <div class="md:w-1/2 text-center space-y-5">
-                <h1 class="text-2xl font-semibold">كيف يمكننا مساعدتك؟ 🎁</h1>
-                <p>نحن هنا لتلبية جميع احتياجاتك من مستلزمات الهدايا
-                    ملأ النموذج أدناه وسنكون سعداء بمساعدتك في اختيار الهدية المثالية!</p>
+        <div class="container mx-auto p-4 lg:flex lg:gap-8">
+            <!-- نموذج الدفع -->
+            <div class="bg-white p-6 rounded-lg border w-full lg:w-2/3">
+                <h2 class="text-xl font-bold mb-4">معلومات الدفع</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <input type="text" placeholder="الاسم الأول" class="border p-2 rounded w-full">
+                    <input type="text" placeholder="اسم العائلة" class="border p-2 rounded w-full">
+                    <input type="text" placeholder="اسم الشركة (اختياري)" class="border p-2 rounded w-full md:col-span-2">
+                    <input type="text" placeholder="عنوان الشارع" class="border p-2 rounded w-full md:col-span-2">
+                    <select class="border p-2 rounded w-full">
+                        <option>الدولة / المنطقة</option>
+                    </select>
+                    <select class="border p-2 rounded w-full">
+                        <option>المدينة</option>
+                    </select>
+                    <input type="text" placeholder="الرمز البريدي" class="border p-2 rounded w-full">
+                    <input type="email" placeholder="البريد الإلكتروني" class="border p-2 rounded w-full">
+                    <input type="text" placeholder="رقم الجوال" class="border p-2 rounded w-full">
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" class="peer hidden">
+                        <span class="w-4 h-4 border-2 border-[#C190BD] rounded-md flex justify-center items-center peer-checked:bg-[#C190BD] peer-checked:border-[#C190BD]">
+                            <svg width="12" height="8" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                        
+                        </span>
+                        <span class="flex gap-2 items-center">الشحن إلى عنوان مختلف</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">معلومات إضافية</h3>
+                    <textarea placeholder="ملاحظات عن الطلب، مثل توصيل خاص" class="border p-2 rounded w-full text-sm"></textarea>
+                </div>
             </div>
-
-            <!-- inputs -->
-             <div class="md:w-1/2 w-full px-5 flex justify-center items-center gap-4 text-sm">
-                <form class="flex flex-col gap-4 justify-center items-center w-full">
-
-                    <!-- name and email -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full">
-                        <input type="text" placeholder="الاسم*" class="p-1.5 w-full">
-                        <input type="email" placeholder="البريد الالكتروني*" class="p-1.5 w-full">
+    
+            <!-- ملخص الطلب -->
+            <div class="bg-white p-6 rounded-lg border w-full lg:w-1/3 mt-6 lg:mt-0">
+                <h2 class="text-xl font-bold mb-4">ملخص الطلب</h2>
+                <div class="border-b pb-4 mb-4 space-y-2 text-xs">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <img class="size-12 object-cover bg-gray-300">
+                            <span>منتج 1 ×5</span>
+                        </div>
+                        <span>$70.00</span>
                     </div>
-
-                    <!-- reason and phone -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full">
-                        <input type="text" placeholder="رقم الجوال*" class="p-1.5 w-full">
-                        <input type="text" placeholder="سبب التواصل" class="p-1.5 w-full">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <img class="size-12 object-cover bg-gray-300">
+                            <span>منتج 2 ×1</span>
+                        </div>
+                        <span>$14.00</span>
                     </div>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span>الإجمالي الفرعي:</span>
+                    <span>$84.00</span>
+                </div>
+                <div class="flex justify-between mb-4">
+                    <span>الشحن:</span>
+                    <span>مجاني</span>
+                </div>
+                <div class="flex justify-between font-bold text-lg">
+                    <span>الإجمالي:</span>
+                    <span>$84.00</span>
+                </div>
+    
+                <!-- طرق الدفع -->
+                <h3 class="text-lg font-semibold mt-4 mb-2">طريقة الدفع</h3>
+                <div class="space-y-2">
+                    <label class="flex items-center space-x-2 cursor-pointer relative">
+                        <input type="radio" name="payment" class="peer hidden">
+                        <div class="w-3 h-3 bg-[#C190BD] rounded-full peer-checked:flex hidden absolute right-1"></div>
+                        <div class="w-5 h-5 border-2 border-[#C190BD] rounded-full flex justify-center items-center bg-white">
+                        </div>
+                        <span class="text-gray-700">الدفع عند الاستلام</span>
+                    </label>
 
-                    <!-- reason and phone -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full">
-                        <textarea rows="5" placeholder="محتوى الرسالة" class="p-1.5 w-full"></textarea>
-                    </div>
+                    <label class="flex items-center space-x-2 cursor-pointer relative">
+                        <input type="radio" name="payment" class="peer hidden">
+                        <div class="w-3 h-3 bg-[#C190BD] rounded-full peer-checked:flex hidden absolute right-1"></div>
+                        <div class="w-5 h-5 border-2 border-[#C190BD] rounded-full flex justify-center items-center bg-white">
+                        </div>
+                        <span class="text-gray-700">أبل باي</span>
+                    </label>
 
-                    <!-- note -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full text-xs text-gray-400">
-                        <p>حقول إجبارية *</p>
-                    </div>
+                    <label class="flex items-center space-x-2 cursor-pointer relative">
+                        <input type="radio" name="payment" class="peer hidden">
+                        <div class="w-3 h-3 bg-[#C190BD] rounded-full peer-checked:flex hidden absolute right-1"></div>
+                        <div class="w-5 h-5 border-2 border-[#C190BD] rounded-full flex justify-center items-center bg-white">
+                        </div>
+                        <span class="text-gray-700">مدى</span>
+                    </label>
 
-                    <div>
-                        <button type="submit" class="bg-[#C190BD] hover:bg-[#B78FB4] transition-all p-2 px-24 md:px-44 text-white rounded-md">ارسال</button>
-                    </div>
-                </form>
-             </div>
+                </div>
+                <button class="bg-[#C190BD] hover:bg-[#B087AC] transition-all text-white w-full py-2 mt-4 rounded-full">إتمام الطلب</button>
+            </div>
         </div>
+
     </div>
 
 
@@ -311,22 +368,39 @@
     });
 </script>
 
-
-<!-- for list button rigth and left scroll-->
+<!-- for switch images and counter -->
 <script>
-    document.getElementById("scrollLeft").addEventListener("click", function () {
-        document.getElementById("scrollContainer").scrollBy({ left: -150, behavior: 'smooth' });
-    });
+    function increaseQuantity() {
+            let quantity = document.getElementById("quantity");
+            quantity.textContent = parseInt(quantity.textContent) + 1;
+        }
 
-    document.getElementById("scrollRight").addEventListener("click", function () {
-        document.getElementById("scrollContainer").scrollBy({ left: 150, behavior: 'smooth' });
-    });
+    function decreaseQuantity() {
+        let quantity = document.getElementById("quantity");
+        if (parseInt(quantity.textContent) > 1) {
+             quantity.textContent = parseInt(quantity.textContent) - 1;
+        }
+    }
 
-    document.getElementById("scrollLeft2").addEventListener("click", function () {
-        document.getElementById("scrollContainer2").scrollBy({ left: -150, behavior: 'smooth' });
-    });
+    function changeImage(element) {
+        document.getElementById('mainImage').src = element.src;
+    }
 
-    document.getElementById("scrollRight2").addEventListener("click", function () {
-        document.getElementById("scrollContainer2").scrollBy({ left: 150, behavior: 'smooth' });
-    });
+
+
+    function increaseQuantity1() {
+            let quantity1 = document.getElementById("quantity1");
+            quantity1.textContent = parseInt(quantity1.textContent) + 1;
+        }
+
+    function decreaseQuantity1() {
+        let quantity1 = document.getElementById("quantity1");
+        if (parseInt(quantity1.textContent) > 1) {
+             quantity1.textContent = parseInt(quantity1.textContent) - 1;
+        }
+    }
+
+    function changeImage(element) {
+        document2.getElementById('mainImage').src = element.src;
+    }
 </script>

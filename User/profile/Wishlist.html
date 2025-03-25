@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Wishlist</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -37,20 +37,20 @@
 
         <!-- Navigation Links (Hidden on Mobile) -->
         <nav class="hidden md:flex gap-8 items-center px-3 text-[#170F49]">
-            <a href="./Home.html" class="hover:border-b-2 transition-all border-[#170F49]">الرئيسية</a>
-            <a href="./About.html" class="hover:border-b-2 transition-all border-[#170F49]">حول</a>
-            <a href="./Shop.html" class="hover:border-b-2 transition-all border-[#170F49]">المتجر</a>
-            <a href="./Contact.html" class="font-bold border-b-2 border-[#170F49]">تواصل</a>
+            <a href="../Home.html" class="hover:border-b-2 transition-all border-[#170F49]">الرئيسية</a>
+            <a href="../About.html" class="hover:border-b-2 transition-all border-[#170F49]">حول</a>
+            <a href="../Shop.html" class="hover:border-b-2 transition-all border-[#170F49]">المتجر</a>
+            <a href="../Contact.html" class="hover:border-b-2 transition-all border-[#170F49]">تواصل</a>
         </nav>
 
         <!-- Logo -->
         <div>
-            <img src="../img/logo.png" alt="" class="size-12 md:size-16">
+            <img src="../../img/logo.png" alt="" class="size-12 md:size-16">
         </div>
 
         <!-- the Panier button, just will appear in mobile -->
         <div class="relative md:hidden flex">
-            <a href="">
+            <a href="../Char.html">
                 <svg width="20" height="21" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M8.33333 10.6667H4.08333L1.25 26.25H26.75L23.9167 10.6667H19.6667M8.33333 10.6667V6.41667C8.33333 3.28705 10.8704 0.75 14 0.75V0.75C17.1296 0.75 19.6667 3.28705 19.6667 6.41667V10.6667M8.33333 10.6667H19.6667M8.33333 10.6667V14.9167M19.6667 10.6667V14.9167"
@@ -68,8 +68,8 @@
 
             <!-- Register and sign in buttons -->
             <div class="flex gap-4 items-center">
-                <a href="../Auth/Create New Account.html" class="bg-[#1E1E1E] rounded-md text-white p-2">تسجيل</a>
-                <a href="../Auth/Log in.html">دخول</a>
+                <a href="../../Auth/Create New Account.html" class="bg-[#1E1E1E] rounded-md text-white p-2">تسجيل</a>
+                <a href="../../Auth/Log in.html">دخول</a>
             </div>
 
             <!-- translate button -->
@@ -84,7 +84,7 @@
 
             <!-- the Panier button -->
             <div class="relative">
-                <a href="./Char.html">
+                <a href="">
                     <svg width="20" height="21" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8.33333 10.6667H4.08333L1.25 26.25H26.75L23.9167 10.6667H19.6667M8.33333 10.6667V6.41667C8.33333 3.28705 10.8704 0.75 14 0.75V0.75C17.1296 0.75 19.6667 3.28705 19.6667 6.41667V10.6667M8.33333 10.6667H19.6667M8.33333 10.6667V14.9167M19.6667 10.6667V14.9167"
@@ -157,65 +157,113 @@
             </div>
 
             <div class="pt-10 flex flex-col items-center gap-5">
-                <a href="./Home.html">الرئيسية</a>
-                <a href="./About.html">حول</a>
-                <a href="./Shop.html">المتجر</a>
-                <a href="./Contact.html">تواصل</a>
+                <a href="../Home.html">الرئيسية</a>
+                <a href="../About.html">حول</a>
+                <a href="../Shop.html">المتجر</a>
+                <a href="../Contact.html">تواصل</a>
             </div>
 
             <div class="pt-14 flex justify-center items-center gap-5">
-                <a href="../Auth/Create New Account.html" class="bg-[#1E1E1E] rounded-md text-white p-2 px-4">تسجيل</a>
-                <a href="../Auth/Log in.html" class="px-4">دخول</a>
+                <a href="../../Auth/Create New Account.html" class="bg-[#1E1E1E] rounded-md text-white p-2 px-4">تسجيل</a>
+                <a href="../../Auth/Log in.html" class="px-4">دخول</a>
             </div>
 
         </div>
 
     </div>
 
-    <div>
-        
+    <div class="flex flex-col justify-center items-center py-14 w-full">
 
-        <!-- How can we help you? -->
-        <div class="flex flex-col gap-7 items-center justify-center md:py-20 md:pb-28 py-10 px-5 bg-[#F6F8F7] my-20 md:">
+        <div class="container mx-auto max-w-4xl bg-white p-4 md:p-6 rounded-lg">
+            <h2 class="text-center text-xl md:text-2xl font-semibold mb-8">قائمة الأماني</h2>
 
-            <!-- text -->
-            <div class="md:w-1/2 text-center space-y-5">
-                <h1 class="text-2xl font-semibold">كيف يمكننا مساعدتك؟ 🎁</h1>
-                <p>نحن هنا لتلبية جميع احتياجاتك من مستلزمات الهدايا
-                    ملأ النموذج أدناه وسنكون سعداء بمساعدتك في اختيار الهدية المثالية!</p>
+            <!-- for laptop -->
+            <div class="hidden md:block border border-gray-200 text-sm rounded-lg">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-2 px-3 ">المنتج</th>
+                            <th class="py-2 px-3 ">السعر</th>
+                            <th class="py-2 px-4 ">حالة المخزون</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-3 md:p-3 flex items-center gap-2 md:gap-4 text-xs">
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-300"></div>
+                                <span class="break-words">منتج 1</span>
+                            </td>
+                            <td class="p-3 md:p-3 font-bold text-center">$14.99 <span class="text-gray-400 line-through">$20.99</span></td>
+                            <td class="p-3 md:p-3 text-[#2C742F] text-center"><span class="bg-[#20B526]/20 px-2 py-1 rounded text-xs">متوفر</span></td>
+                            <td class="p-3 md:p-3 text-center text-xs"><button class="bg-[#5D326C]/80 text-white px-3 py-1 md:px-4 md:py-2 rounded-full">أضف للسلة</button></td>
+                            <td class="p-3 md:p-3 text-red-500 cursor-pointer">❌</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-3 md:p-3 flex items-center gap-2 md:gap-4 text-xs">
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-300"></div>
+                                <span class="break-words">منتج 2</span>
+                            </td>
+                            <td class="p-3 md:p-3 font-bold text-center">$45.00</td>
+                            <td class="p-3 md:p-3 text-[#2C742F] text-center"><span class="bg-[#20B526]/20 px-2 py-1 rounded text-xs">متوفر</span></td>
+                            <td class="p-3 md:p-3 text-center text-xs"><button class="bg-[#5D326C]/80 text-white px-3 py-1 md:px-4 md:py-2 rounded-full">أضف للسلة</button></td>
+                            <td class="p-3 md:p-3 text-red-500 cursor-pointer">❌</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-3 md:p-3 flex items-center gap-2 md:gap-4 text-xs">
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-300"></div>
+                                <span class="break-words">منتج 3</span>
+                            </td>
+                            <td class="p-3 md:p-3 font-bold text-center">$9.00</td>
+                            <td class="p-3 md:p-3 text-[#EA4B48] text-center"><span class="bg-[#EA4B48]/20 px-2 py-1 rounded text-xs">غير متوفر</span></td>
+                            <td class="p-3 md:p-3 text-cente text-xs text-center"><button class="bg-[#F2F2F2] text-[#B3B3B3] px-3 py-1 md:px-4 md:py-2 rounded-full cursor-not-allowed" disabled>غير متوفر</button></td>
+                            <td class="p-3 md:p-3 text-red-500 cursor-pointer">❌</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- inputs -->
-             <div class="md:w-1/2 w-full px-5 flex justify-center items-center gap-4 text-sm">
-                <form class="flex flex-col gap-4 justify-center items-center w-full">
-
-                    <!-- name and email -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full">
-                        <input type="text" placeholder="الاسم*" class="p-1.5 w-full">
-                        <input type="email" placeholder="البريد الالكتروني*" class="p-1.5 w-full">
+            <!-- for mobile -->
+            <div class="md:hidden flex flex-col gap-4">
+                <div class="bg-white p-4 rounded-lg shadow border">
+                    <div class="flex gap-2 items-center">
+                        <div class="w-16 h-16 bg-gray-300"></div>
+                        <div class="space-y-2">
+                            <p class="font-semibold break-words">منتج 1</p>
+                            <p class="text-sm text-gray-600 font-semibold">$14.99 <span class="text-gray-400 line-through font-medium">$20.99</span></p>
+                            <p class="text-[#2C742F] bg-[#20B526]/20 py-0.5 px-2 rounded w-fit text-xs">متوفر</p>
+                        </div>
                     </div>
+                    <button class="mt-2 w-full bg-[#5D326C]/80 text-white py-2 rounded-full text-sm">أضف للسلة</button>
+                    <button class="mt-2 w-full border bg-gray-100 text-gray-700 py-2 rounded-full text-sm">إزالة</button>
+                </div>
 
-                    <!-- reason and phone -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full">
-                        <input type="text" placeholder="رقم الجوال*" class="p-1.5 w-full">
-                        <input type="text" placeholder="سبب التواصل" class="p-1.5 w-full">
+                <div class="bg-white p-4 rounded-lg shadow border">
+                    <div class="flex gap-2 items-center">
+                        <div class="w-16 h-16 bg-gray-300"></div>
+                        <div class="space-y-2">
+                            <p class="font-semibold break-words">منتج 2</p>
+                            <p class="text-sm text-gray-600 font-semibold">$14.99</p>
+                            <p class="text-[#2C742F] bg-[#20B526]/20 py-0.5 px-2 rounded w-fit text-xs">متوفر</p>
+                        </div>
                     </div>
+                    <button class="mt-2 w-full bg-[#5D326C]/80 text-white py-2 rounded-full text-sm">أضف للسلة</button>
+                    <button class="mt-2 w-full border bg-gray-100 text-gray-700 py-2 rounded-full text-sm">إزالة</button>
+                </div>
 
-                    <!-- reason and phone -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full">
-                        <textarea rows="5" placeholder="محتوى الرسالة" class="p-1.5 w-full"></textarea>
+                <div class="bg-white p-4 rounded-lg shadow border">
+                    <div class="flex gap-2 items-center">
+                        <div class="w-16 h-16 bg-gray-300"></div>
+                        <div class="space-y-2">
+                            <p class="font-semibold break-words">منتج 3</p>
+                            <p class="text-sm text-gray-600 font-semibold">$14.99</p>
+                            <p class="text-[#EA4B48] bg-[#EA4B48]/20 py-0.5 px-2 rounded w-fit text-xs">غير متوفر</p>
+                        </div>
                     </div>
+                    <button class="mt-2 w-full bg-[#F2F2F2] text-[#B3B3B3] py-2 rounded-full text-sm">غير متوفر</button>
+                    <button class="mt-2 w-full border bg-gray-100 text-gray-700 py-2 rounded-full text-sm">إزالة</button>
+                </div>
 
-                    <!-- note -->
-                    <div class="flex flex-col md:flex-row gap-4 w-full text-xs text-gray-400">
-                        <p>حقول إجبارية *</p>
-                    </div>
-
-                    <div>
-                        <button type="submit" class="bg-[#C190BD] hover:bg-[#B78FB4] transition-all p-2 px-24 md:px-44 text-white rounded-md">ارسال</button>
-                    </div>
-                </form>
-             </div>
+            </div>
         </div>
     </div>
 
@@ -308,25 +356,5 @@
     });
     document.getElementById('close-menu').addEventListener('click', function () {
         document.getElementById('mobile-menu').classList.add('hidden');
-    });
-</script>
-
-
-<!-- for list button rigth and left scroll-->
-<script>
-    document.getElementById("scrollLeft").addEventListener("click", function () {
-        document.getElementById("scrollContainer").scrollBy({ left: -150, behavior: 'smooth' });
-    });
-
-    document.getElementById("scrollRight").addEventListener("click", function () {
-        document.getElementById("scrollContainer").scrollBy({ left: 150, behavior: 'smooth' });
-    });
-
-    document.getElementById("scrollLeft2").addEventListener("click", function () {
-        document.getElementById("scrollContainer2").scrollBy({ left: -150, behavior: 'smooth' });
-    });
-
-    document.getElementById("scrollRight2").addEventListener("click", function () {
-        document.getElementById("scrollContainer2").scrollBy({ left: 150, behavior: 'smooth' });
     });
 </script>
