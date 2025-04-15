@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Offer Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -48,13 +48,14 @@
                 <ul>
 
                     <!-- dashboard -->
-                    <li class="bg-[#D9EDFF] rounded text-[#454545] font-bold mb-1">
+                    <li
+                        class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
                         <a href="./Home.html" class="flex gap-2 items-center p-2">
                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M11 18V12C11 10.8954 10.1046 10 9 10C7.89543 10 7 10.8954 7 12V18M7.98335 1.60011L1.98335 5.14177C1.37395 5.50149 1 6.15646 1 6.8641V16C1 17.1046 1.89543 18 3 18H15C16.1046 18 17 17.1046 17 16V6.8641C17 6.15646 16.6261 5.50149 16.0167 5.14177L10.0167 1.60011C9.38944 1.22988 8.61056 1.22988 7.98335 1.60011Z"
-                                    stroke="#454545" stroke-width="1.4" stroke-linecap="round"
+                                    stroke="#888888" stroke-width="1.4" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                             <p>Dashboard</p>
@@ -63,7 +64,7 @@
 
                     <!-- Product -->
                     <li
-                        class="hover:bg-[#D9EDFF] transition-all     duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
+                        class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
                         <a href="./Product.html" class="flex gap-2 items-center p-2">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -107,12 +108,11 @@
                     </li>
 
                     <!-- Offer management -->
-                    <li
-                        class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
+                    <li class="bg-[#D9EDFF] rounded text-[#454545] font-bold mb-1">
                         <a href="./Offer Management.html" class="flex gap-2 items-center p-2">
                             <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 11.5L7 5L11 11L19 1.5" stroke="#888888" stroke-width="1.4"
+                                <path d="M1 11.5L7 5L11 11L19 1.5" stroke="#454545" stroke-width="1.4"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             <p>Offer Management</p>
@@ -264,133 +264,123 @@
 
                 <!-- text -->
                 <div class="mb-6">
-                    <h2 class="text-xl font-bold mb-1">Dashboard</h2>
-                    <p class="text-[#888888] text-xs">Dashboard</p>
-                </div>
-
-                <div class="flex gap-5 justify-between w-full">
-                    <!-- Sales Graph Placeholder -->
-                    <div class="bg-white p-6 rounded-md border border-[#E7E7E7] mb-6 w-full">
-
-                        <!-- header -->
-                        <div class="flex justify-between items-center mb-7">
-                            <h3 class="font-bold">Your Sales this year</h3>
-
-                            <a href="#"
-                                class="flex gap-1 font-semibold text-xs items-center justify-center hover:underline transition-all">
-                                <p>Show All</p>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7" stroke="#020617" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M7 7H17V17" stroke="#020617" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <!-- the graph -->
-                        <div class="h-40 flex items-center justify-center text-gray-500">
-                            <canvas id="salesChart" width="400" height="200" class="bg-white"></canvas>
-                        </div>
-                    </div>
-
-                    <!-- Stats -->
-                    <div class="grid grid-cols-2 gap-4 mb-6 w-full cursor-default">
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Revenue</div>
-                            <div class="text-2xl font-bold">$81.000</div>
-                            <div class="text-[#09DE13] text-sm">▲ 10.6% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Customer</div>
-                            <div class="text-2xl font-bold">5.000</div>
-                            <div class="text-[#FF0000] text-sm">▼ 1.5% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Transactions</div>
-                            <div class="text-2xl font-bold">12.000</div>
-                            <div class="text-[#09DE13] text-sm">▲ 10.6% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Product</div>
-                            <div class="text-2xl font-bold">5.000</div>
-                            <div class="text-[#FF0000] text-sm">▼ 1.5% From last week</div>
-                        </div>
+                    <h2 class="text-xl font-bold mb-1">Offer Management</h2>
+                    <div class="text-[#888888] text-xs flex gap-2 items-center">
+                        <p>Dashboard</p>
+                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.33366 5.50008L0.666992 0.166748V10.8334L7.33366 5.50008Z" fill="#737373" />
+                        </svg>
+                        <p>Offer Management</p>
                     </div>
                 </div>
 
-                <!-- Product Popular -->
-                <div class="bg-white p-6 rounded-md border border-[#E7E7E7]">
-                    <!-- header -->
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold">Product Popular</h3>
+                <div class="bg-white rounded-md border border-[#E7E7E7] p-4 pb-14 text-sm">
 
-                        <a href="#"
-                            class="flex gap-1 font-semibold text-xs items-center justify-center hover:underline transition-all">
-                            <p>Show All</p>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    <div
+                        class="flex flex-col items-center justify-center md:py-16 py-10 px-5 md:px-0 bg-[#EBE1DF] font-semibold relative">
+                        <p class="z-10 pointer-events-none">أفضل العروض</p>
+                        <h1 class="text-3xl mt-2 mb-7 z-10 pointer-events-none text-center">صفقات الشهر على منتجاتنا
+                            المميزة</h1>
+
+                        <!-- the timer -->
+                        <div class="flex gap-2 items-center justify-center mb-7 z-10">
+
+                            <!-- second -->
+                            <div class="bg-white rounded-md md:w-16 w-14 p-2 flex flex-col justify-center items-center">
+                                <input value="46" class="text-lg w-full text-center border rounded-md">
+                                <p class="text-[#618062] text-sm">ثانية</p>
+                            </div>
+
+                            <p>:</p>
+
+                            <!-- minute -->
+                            <div class="bg-white rounded-md md:w-16 w-14 p-2 flex flex-col justify-center items-center">
+                                <input value="18" class="text-lg w-full text-center border rounded-md">
+                                <p class="text-[#618062] text-sm">دقيقة</p>
+                            </div>
+
+                            <p>:</p>
+
+                            <!-- hour  -->
+                            <div class="bg-white rounded-md md:w-16 w-14 p-2 flex flex-col justify-center items-center">
+                                <input value="02" class="text-lg w-full text-center border rounded-md">
+                                <p class="text-[#618062] text-sm">ساعه</p>
+                            </div>
+
+                            <p>:</p>
+
+                            <!-- days -->
+                            <div class="bg-white rounded-md md:w-16 w-14 p-2 flex flex-col justify-center items-center">
+                                <input value="00" class="text-lg w-full text-center border rounded-md">
+                                <p class="text-[#618062] text-sm">ايام</p>
+                            </div>
+
+                        </div>
+
+                        <!-- add discount input -->
+                        <div
+                            class="flex gap-2 p-2 px-6 items-center justify-center bg-[#1A1A1B] rounded-full z-10 text-white">
+                            <p>add discount</p>
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7" stroke="#020617" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M7 7H17V17" stroke="#020617" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16 7.50049H1" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M9.94995 1.47559L16 7.49959L9.94995 13.5246" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a>
+                            <input type="text" placeholder="20%"
+                                class="bg-black p-2 border-2 border-white rounded-lg focus:outline-none w-20 text-center">
+                        </div>
+
                     </div>
 
-                    <!-- the table -->
-                    <table class="w-full text-left text-sm border-collapse">
-                        <thead>
-                            <tr>
-                                <th class="py-2">Product</th>
-                                <th class="py-2">Price</th>
-                                <th class="py-2">Sales</th>
-                                <th class="py-2">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <!-- table and dropdown list -->
+                    <div class="w-full mt-14">
+                        <!-- Dropdown Container -->
+                        <div class="flex gap-4 w-full">
+                          <!-- Dropdown Button -->
+                          <div class="relative w-1/2">
+                            <button onclick="toggleDropdown()" class="w-full border px-4 py-2 rounded-md bg-white text-left flex justify-between">
+                              <p>Select product to apply discount</p>
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                              </svg>                              
+                            </button>
+                      
+                            <!-- Dropdown Menu -->
+                            <div id="dropdownMenu" class="absolute w-full bg-white border rounded-md mt-1 shadow hidden z-10">
+                              <input type="text" id="searchInput" oninput="filterOptions()" placeholder="Search..."
+                                class="w-full px-3 py-2 border-b text-sm outline-none" />
+                              <ul id="dropdownOptions" class="max-h-48 overflow-auto text-sm">
+                                <!-- Options will be generated by JS -->
+                              </ul>
+                            </div>
+                          </div>
+                      
+                          <!-- Selected Item Table -->
+                          <div class="bg-white shadow rounded-md p-4 w-1/2">
+                            <h2 class="font-semibold mb-2">Selected Items</h2>
+                            <table class="min-w-full text-sm text-left border-t border-gray-200">
+                              <thead>
+                                <tr class="text-gray-500">
+                                  <th class="py-2">#</th>
+                                  <th class="py-2">Item</th>
+                                  <th class="py-2">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody id="selectedTableBody">
+                                <!-- Selected rows will appear here -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                    </div>
 
-                            <!-- row 1 -->
-                            <tr class="border-t">
-                                <td class="py-4">
-                                    <div class="flex gap-2 items-center">
-                                        <img src="" alt="" class="size-10 rounded-md bg-gray-200 object-cover">
-                                        <div>
-                                            <h1 class="text-[#454545]">12345</h1>
-                                            <p class="text-black break-all text-xs">Product 1</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="py-4">$20.00</td>
-                                <td class="py-4">3000</td>
-                                <td class="py-4"><span
-                                        class="bg-[#B2FFB4] text-[#04910C] text-xs px-2 rounded-md p-1 text-center">Success</span>
-                                </td>
-                            </tr>
-
-                            <!-- row 2 -->
-                            <tr class="border-t">
-                                <td class="py-4">
-                                    <div class="flex gap-2 items-center">
-                                        <img src="" alt="" class="size-10 rounded-md bg-gray-200 object-cover">
-                                        <div>
-                                            <h1 class="text-[#454545]">67890</h1>
-                                            <p class="text-black break-all text-xs">Product 2</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="py-4">$20.00</td>
-                                <td class="py-4">3000</td>
-                                <td class="py-4"><span
-                                        class="bg-[#B2FFB4] text-[#04910C] text-xs px-2 rounded-md p-1 text-center">Success</span>
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                    <div class="flex justify-center items-center w-full py-32">
+                        <button type="submit" class="py-2 px-44 text-center text-white bg-[#1A71F6] hover:bg-[#0963ed] transition-all duration-200 rounded-md font-semibold">Save</button>
+                    </div>
+                    
+                    
                 </div>
             </div>
 
@@ -450,6 +440,81 @@
             }]
         });
     </script>
+
+    <!-- for dropdown menu -->
+    <script>
+        const options = [
+          "Sneakers", "T-Shirt", "Bag", "Jacket", "Hat", "Jeans", "Scarf", "Socks", "Shoes", "Glasses", "Watch"
+        ];
+      
+        const dropdownMenu = document.getElementById("dropdownMenu");
+        const dropdownOptions = document.getElementById("dropdownOptions");
+        const selectedTableBody = document.getElementById("selectedTableBody");
+      
+        const selectedItems = []; // سنحتفظ بجميع العناصر المختارة
+      
+        function toggleDropdown() {
+          dropdownMenu.classList.toggle("hidden");
+        }
+      
+        function renderOptions(filteredOptions = options) {
+          dropdownOptions.innerHTML = "";
+          filteredOptions.forEach(option => {
+            const li = document.createElement("li");
+            li.textContent = option;
+            li.className = "px-4 py-2 hover:bg-blue-100 cursor-pointer";
+            li.onclick = () => {
+              if (!selectedItems.includes(option)) { // التأكد من أن العنصر غير موجود بالفعل
+                selectedItems.push(option); // إضافة العنصر إلى القائمة
+                renderSelectedItems(); // تحديث الجدول
+              }
+              dropdownMenu.classList.add("hidden");  // إغلاق القائمة بعد الاختيار
+            };
+            dropdownOptions.appendChild(li);
+          });
+        }
+      
+        function filterOptions() {
+          const search = document.getElementById("searchInput").value.toLowerCase();
+          const filtered = options.filter(opt => opt.toLowerCase().includes(search));
+          renderOptions(filtered);
+        }
+      
+        function renderSelectedItems() {
+          selectedTableBody.innerHTML = ""; // إعادة تحميل الجدول بحيث يحتوي على جميع العناصر المختارة
+          selectedItems.forEach((item, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td class="py-2">${index + 1}</td>
+              <td class="py-2">${item}</td>
+              <td class="py-2">
+                <button onclick="removeItem('${item}')" class="text-red-500 hover:underline text-xs">Remove</button>
+              </td>
+            `;
+            selectedTableBody.appendChild(row);
+          });
+        }
+      
+        function removeItem(item) {
+          const idx = selectedItems.indexOf(item);
+          if (idx > -1) {
+            selectedItems.splice(idx, 1); // إزالة العنصر من القائمة
+            renderSelectedItems(); // تحديث الجدول بعد إزالة العنصر
+          }
+        }
+      
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("#dropdownMenu") && !e.target.closest("button")) {
+            dropdownMenu.classList.add("hidden");
+          }
+        });
+      
+        // Initialize options on load
+        renderOptions();
+      </script>
+
+
 
 </body>
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Orders</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -48,13 +48,14 @@
                 <ul>
 
                     <!-- dashboard -->
-                    <li class="bg-[#D9EDFF] rounded text-[#454545] font-bold mb-1">
+                    <li
+                        class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
                         <a href="./Home.html" class="flex gap-2 items-center p-2">
                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M11 18V12C11 10.8954 10.1046 10 9 10C7.89543 10 7 10.8954 7 12V18M7.98335 1.60011L1.98335 5.14177C1.37395 5.50149 1 6.15646 1 6.8641V16C1 17.1046 1.89543 18 3 18H15C16.1046 18 17 17.1046 17 16V6.8641C17 6.15646 16.6261 5.50149 16.0167 5.14177L10.0167 1.60011C9.38944 1.22988 8.61056 1.22988 7.98335 1.60011Z"
-                                    stroke="#454545" stroke-width="1.4" stroke-linecap="round"
+                                    stroke="#888888" stroke-width="1.4" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                             <p>Dashboard</p>
@@ -62,8 +63,7 @@
                     </li>
 
                     <!-- Product -->
-                    <li
-                        class="hover:bg-[#D9EDFF] transition-all     duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
+                    <li class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
                         <a href="./Product.html" class="flex gap-2 items-center p-2">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -78,13 +78,13 @@
 
                     <!-- Transaction -->
                     <li
-                        class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
+                        class="bg-[#D9EDFF] rounded text-[#454545] font-bold mb-1">
                         <a href="./Orders.html" class="flex gap-2 items-center p-2">
                             <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M9 1H3C1.89543 1 1 1.89543 1 3V17C1 18.1046 1.89543 19 3 19H13C14.1046 19 15 18.1046 15 17V7M9 1L15 7M9 1V6C9 6.55228 9.44772 7 10 7H15M5 11H11M5 15H11"
-                                    stroke="#888888" stroke-width="1.4" stroke-linecap="round"
+                                    stroke="#454545" stroke-width="1.4" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                             <p>Transaction (441)</p>
@@ -264,91 +264,114 @@
 
                 <!-- text -->
                 <div class="mb-6">
-                    <h2 class="text-xl font-bold mb-1">Dashboard</h2>
-                    <p class="text-[#888888] text-xs">Dashboard</p>
+                    <h2 class="text-xl font-bold mb-1">Product</h2>
+                    <div class="text-[#888888] text-xs flex gap-2 items-center">
+                        <p>Dashboard</p>
+                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.33366 5.50008L0.666992 0.166748V10.8334L7.33366 5.50008Z" fill="#737373" />
+                        </svg>
+                        <p>Orders</p>
+                    </div>
                 </div>
 
-                <div class="flex gap-5 justify-between w-full">
-                    <!-- Sales Graph Placeholder -->
-                    <div class="bg-white p-6 rounded-md border border-[#E7E7E7] mb-6 w-full">
+                <div class="bg-white border border-[#E7E7E7] rounded-md">
 
-                        <!-- header -->
-                        <div class="flex justify-between items-center mb-7">
-                            <h3 class="font-bold">Your Sales this year</h3>
+                    <!-- Header Actions -->
+                    <div class="flex flex-wrap justify-between items-center gap-4 p-4">
+                        <!-- Search bar -->
+                        <form action="">
+                            <div class="flex justify-between items-center relative">
+                                <input type="text" placeholder="Search product"
+                                    class="border border-[#B0B0B0] rounded px-4 py-1 pr-8 text-sm w-96" />
+                                <button type="submit" class="absolute right-2">
+                                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.3891 10.8891L16 16.5M6.5 12.5C9.53757 12.5 12 10.0376 12 7C12 3.96243 9.53757 1.5 6.5 1.5C3.46243 1.5 1 3.96243 1 7C1 10.0376 3.46243 12.5 6.5 12.5Z"
+                                            stroke="#454545" stroke-width="1.4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
 
-                            <a href="#"
-                                class="flex gap-1 font-semibold text-xs items-center justify-center hover:underline transition-all">
-                                <p>Show All</p>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <!-- Buttons -->
+                        <div class="flex gap-2 text-xs font-semibold">
+                            <button
+                                class="border border-[#B0B0B0] hover:bg-[#B0B0B0]/10 transition-all duration-200 px-4 py-2 rounded-lg flex justify-center items-center gap-2">
+                                <p>Filter</p>
+                                <svg width="15" height="9" viewBox="0 0 18 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7" stroke="#020617" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M7 7H17V17" stroke="#020617" stroke-linecap="round"
+                                    <path d="M1 1H17M3.99994 6H13.9999M7.99994 11H9.99994" stroke="#454545"
+                                        stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button
+                                class="border border-[#B0B0B0] hover:bg-[#B0B0B0]/10 transition-all duration-200 px-4 py-2 rounded-lg flex justify-center items-center gap-2">
+                                <p>Export</p>
+                                <svg width="15" height="13" viewBox="0 0 20 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14 9L10 13M10 13L6 9M10 13V1M19 13V15C19 16.1046 18.1046 17 17 17H3C1.89543 17 1 16.1046 1 15L1 13"
+                                        stroke="#454545" stroke-width="1.4" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
+
+                            </button>
+                            <a href=""
+                                class="bg-[#1A71F6] hover:bg-[#0963ed] transition-all text-white duration-200 px-4 py-2 rounded-lg flex justify-center items-center gap-2">
+                                <p>New Order</p>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 1V13M13 7H1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
                             </a>
                         </div>
 
-                        <!-- the graph -->
-                        <div class="h-40 flex items-center justify-center text-gray-500">
-                            <canvas id="salesChart" width="400" height="200" class="bg-white"></canvas>
-                        </div>
                     </div>
 
-                    <!-- Stats -->
-                    <div class="grid grid-cols-2 gap-4 mb-6 w-full cursor-default">
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Revenue</div>
-                            <div class="text-2xl font-bold">$81.000</div>
-                            <div class="text-[#09DE13] text-sm">▲ 10.6% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Customer</div>
-                            <div class="text-2xl font-bold">5.000</div>
-                            <div class="text-[#FF0000] text-sm">▼ 1.5% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Transactions</div>
-                            <div class="text-2xl font-bold">12.000</div>
-                            <div class="text-[#09DE13] text-sm">▲ 10.6% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Product</div>
-                            <div class="text-2xl font-bold">5.000</div>
-                            <div class="text-[#FF0000] text-sm">▼ 1.5% From last week</div>
-                        </div>
-                    </div>
-                </div>
+                    <!-- Tabs -->
+                    <div class="relative w-full p-4">
 
-                <!-- Product Popular -->
-                <div class="bg-white p-6 rounded-md border border-[#E7E7E7]">
-                    <!-- header -->
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold">Product Popular</h3>
+                        <div class=" bg-white rounded-md border">
+                            <div class="relative flex flex-wrap items-center px-2 w-full text-xs font-medium py-2">
 
-                        <a href="#"
-                            class="flex gap-1 font-semibold text-xs items-center justify-center hover:underline transition-all">
-                            <p>Show All</p>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7" stroke="#020617" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M7 7H17V17" stroke="#020617" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
+                                <!-- the blue highlight -->
+                                <div id="tabIndicator"
+                                    class="absolute transition-all duration-300 ease-in-out bg-[#D9EDFF] rounded-md h-6 z-0"
+                                    style="width: 120px; left: 0px; top: 0;"></div>
+
+                                <!-- the sections name -->
+                                <button onclick="selectTab(0)" class="relative z-10 w-1/4 text-blue-600 px-2 py-1"
+                                    id="tab-0">All Orders (441)</button>
+                                <button onclick="selectTab(1)" class="relative z-10 w-1/4 text-gray-500 px-2 py-1"
+                                    id="tab-1">Shipping (100)</button>
+                                <button onclick="selectTab(2)" class="relative z-10 w-1/4 text-gray-500 px-2 py-1"
+                                    id="tab-2">Completed (300)</button>
+                                <button onclick="selectTab(3)" class="relative z-10 w-1/4 text-gray-500 px-2 py-1"
+                                    id="tab-3">Cancel (41)</button>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <!-- the table -->
+                    <!-- All Orders Sections -->
+                    <div id="content-0" class="tab-content block bg-white p-5 rounded-md">
+                        <!-- the table -->
                     <table class="w-full text-left text-sm border-collapse">
                         <thead>
                             <tr>
-                                <th class="py-2">Product</th>
+                                <th class="py-2">Orders</th>
+                                <th class="py-2">Customer</th>
                                 <th class="py-2">Price</th>
-                                <th class="py-2">Sales</th>
+                                <th class="py-2">Date</th>
+                                <th class="py-2">Payment</th>
                                 <th class="py-2">Status</th>
+                                <th class="py-2">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -359,15 +382,49 @@
                                     <div class="flex gap-2 items-center">
                                         <img src="" alt="" class="size-10 rounded-md bg-gray-200 object-cover">
                                         <div>
-                                            <h1 class="text-[#454545]">12345</h1>
-                                            <p class="text-black break-all text-xs">Product 1</p>
+                                            <h1 class="text-[#1A71F6]">12345</h1>
+                                            <p class="text-black break-all text-xs font-semibold">Product 1</p>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="py-4">$20.00</td>
-                                <td class="py-4">3000</td>
-                                <td class="py-4"><span
-                                        class="bg-[#B2FFB4] text-[#04910C] text-xs px-2 rounded-md p-1 text-center">Success</span>
+                                <td class="py-4">Leslie Alexander</td>
+                                <td class="py-4">$21.78</td>
+                                <td class="py-4">04/17/23</td>
+                                <td class="py-4">
+                                    <span class="bg-[#E6FF96] text-[#00B809] text-xs px-2 rounded-md p-1 text-center">Paid</span>
+                                    <!-- <span class="bg-[#FFF5C5] text-[#E27D00] text-xs px-2 rounded-md p-1 text-center">Unpaid</span> -->
+                                </td>
+                                <td class="py-4">
+                                    <!-- <span class="bg-[#DCD2FF] text-[#7F27FF] text-xs px-2 rounded-md p-1 text-center">Shipping</span> -->
+                                    <!-- <span class="bg-[#90ee90] text-[#116e11] text-xs px-2 rounded-md p-1 text-center">Complate</span> -->
+                                    <span class="bg-[#FEC6AA] text-[#EB2B0B] text-xs px-2 rounded-md p-1 text-center">Cancelled</span>
+                                </td>
+                                <td class="w-fit">
+                                    <form action="" class="flex gap-6 w-fit">
+
+                                        <!-- view-->
+                                        <a href="./Order details.html">
+                                            <svg width="20" height="14" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.0002C19.2531 11.5764 14.8775 15 10.9998 15C7.12201 15 2.74646 11.5764 1 7.99978" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.0002C19.2531 4.42398 14.8782 1 11.0005 1C7.1227 1 2.74646 4.42314 1 7.99978" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                        </a>
+
+                                        <!-- edit -->
+                                        <a href="./Edit Product.html">
+                                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 2H3C1.89543 2 1 2.89543 1 4V16C1 17.1046 1.89543 18 3 18H15C16.1046 18 17 17.1046 17 16V10M6 13V10.5L14.75 1.75C15.4404 1.05964 16.5596 1.05964 17.25 1.75V1.75C17.9404 2.44036 17.9404 3.55964 17.25 4.25L12.5 9L8.5 13H6Z" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg> 
+                                        </a>
+                                               
+                                        <!-- delete -->
+                                        <button>
+                                            <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 3H13M4 3V3C5.57692 1.16026 8.42308 1.16026 10 3V3M4 18H10C11.1046 18 12 17.1046 12 16V7C12 6.44772 11.5523 6 11 6H3C2.44772 6 2 6.44772 2 7V16C2 17.1046 2.89543 18 4 18Z" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
 
@@ -377,20 +434,72 @@
                                     <div class="flex gap-2 items-center">
                                         <img src="" alt="" class="size-10 rounded-md bg-gray-200 object-cover">
                                         <div>
-                                            <h1 class="text-[#454545]">67890</h1>
-                                            <p class="text-black break-all text-xs">Product 2</p>
+                                            <h1 class="text-[#1A71F6]">12345</h1>
+                                            <p class="text-black break-all text-xs font-semibold">Product 1</p>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="py-4">$20.00</td>
-                                <td class="py-4">3000</td>
-                                <td class="py-4"><span
-                                        class="bg-[#B2FFB4] text-[#04910C] text-xs px-2 rounded-md p-1 text-center">Success</span>
+                                <td class="py-4">Leslie Alexander</td>
+                                <td class="py-4">$21.78</td>
+                                <td class="py-4">04/17/23</td>
+                                <td class="py-4">
+                                    <!-- <span class="bg-[#E6FF96] text-[#00B809] text-xs px-2 rounded-md p-1 text-center">Paid</span> -->
+                                    <span class="bg-[#FFF5C5] text-[#E27D00] text-xs px-2 rounded-md p-1 text-center">Unpaid</span>
+                                </td>
+                                <td class="py-4">
+                                    <span class="bg-[#DCD2FF] text-[#7F27FF] text-xs px-2 rounded-md p-1 text-center">Shipping</span>
+                                    <!-- <span class="bg-[#90ee90] text-[#116e11] text-xs px-2 rounded-md p-1 text-center">Complate</span> -->
+                                    <!-- <span class="bg-[#FEC6AA] text-[#EB2B0B] text-xs px-2 rounded-md p-1 text-center">Cancelled</span> -->
+                                </td>
+                                <td class="w-fit">
+                                    <form action="" class="flex gap-6 w-fit">
+
+                                        <!-- view-->
+                                        <a href="./Order details.html">
+                                            <svg width="20" height="14" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.0002C19.2531 11.5764 14.8775 15 10.9998 15C7.12201 15 2.74646 11.5764 1 7.99978" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.0002C19.2531 4.42398 14.8782 1 11.0005 1C7.1227 1 2.74646 4.42314 1 7.99978" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                        </a>
+
+                                        <!-- edit -->
+                                        <a href="./Edit Product.html">
+                                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 2H3C1.89543 2 1 2.89543 1 4V16C1 17.1046 1.89543 18 3 18H15C16.1046 18 17 17.1046 17 16V10M6 13V10.5L14.75 1.75C15.4404 1.05964 16.5596 1.05964 17.25 1.75V1.75C17.9404 2.44036 17.9404 3.55964 17.25 4.25L12.5 9L8.5 13H6Z" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg> 
+                                        </a>
+                                               
+                                        <!-- delete -->
+                                        <button>
+                                            <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 3H13M4 3V3C5.57692 1.16026 8.42308 1.16026 10 3V3M4 18H10C11.1046 18 12 17.1046 12 16V7C12 6.44772 11.5523 6 11 6H3C2.44772 6 2 6.44772 2 7V16C2 17.1046 2.89543 18 4 18Z" stroke="#737373" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                             
                         </tbody>
                     </table>
+                    </div>
+
+                    <!-- Shipping section -->
+                    <div id="content-1" class="tab-content hidden bg-white p-6 rounded-xl shadow">
+                        <h2 class="text-xl font-bold mb-2">section 2 table here</h2>
+                    </div>
+
+                    <!-- Completed section -->
+                    <div id="content-2" class="tab-content hidden bg-white p-6 rounded-xl shadow">
+                        <h2 class="text-xl font-bold mb-2">section 3 table here</h2>
+                    </div>
+
+                    <!-- Cancelsection -->
+                    <div id="content-3" class="tab-content hidden bg-white p-6 rounded-xl shadow">
+                        <h2 class="text-xl font-bold mb-2">section 4 table here</h2>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -450,6 +559,45 @@
             }]
         });
     </script>
+
+    <!-- for switch between the sections -->
+    <script>
+        function selectTab(index) {
+          const buttons = document.querySelectorAll('button[id^="tab-"]');
+          const contents = document.querySelectorAll('.tab-content');
+          const indicator = document.getElementById('tabIndicator');
+          const selected = buttons[index];
+      
+          // تحديث ألوان الأزرار
+          buttons.forEach(btn => {
+            btn.classList.remove('text-blue-600');
+            btn.classList.add('text-gray-500');
+          });
+          selected.classList.remove('text-gray-500');
+          selected.classList.add('text-blue-600');
+      
+          // تحديث عرض الأقسام
+          contents.forEach(div => div.classList.add('hidden'));
+          document.getElementById('content-' + index).classList.remove('hidden');
+      
+          // تحريك المؤشر الأزرق
+          const left = selected.offsetLeft;
+          const top = selected.offsetTop;
+          const width = selected.offsetWidth;
+          const height = selected.offsetHeight;
+      
+          indicator.style.left = left + 'px';
+          indicator.style.top = top + 'px';
+          indicator.style.width = width + 'px';
+          indicator.style.height = height + 'px';
+        }
+      
+        window.addEventListener('DOMContentLoaded', () => {
+          selectTab(0); // تحديد أول تبويب تلقائيًا
+        });
+      </script>
+      
+
 
 </body>
 

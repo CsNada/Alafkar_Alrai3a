@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Add Product</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -48,13 +48,14 @@
                 <ul>
 
                     <!-- dashboard -->
-                    <li class="bg-[#D9EDFF] rounded text-[#454545] font-bold mb-1">
+                    <li
+                        class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
                         <a href="./Home.html" class="flex gap-2 items-center p-2">
                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M11 18V12C11 10.8954 10.1046 10 9 10C7.89543 10 7 10.8954 7 12V18M7.98335 1.60011L1.98335 5.14177C1.37395 5.50149 1 6.15646 1 6.8641V16C1 17.1046 1.89543 18 3 18H15C16.1046 18 17 17.1046 17 16V6.8641C17 6.15646 16.6261 5.50149 16.0167 5.14177L10.0167 1.60011C9.38944 1.22988 8.61056 1.22988 7.98335 1.60011Z"
-                                    stroke="#454545" stroke-width="1.4" stroke-linecap="round"
+                                    stroke="#888888" stroke-width="1.4" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                             <p>Dashboard</p>
@@ -62,14 +63,13 @@
                     </li>
 
                     <!-- Product -->
-                    <li
-                        class="hover:bg-[#D9EDFF] transition-all     duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
+                    <li class="bg-[#D9EDFF] rounded text-[#454545] font-bold mb-1">
                         <a href="./Product.html" class="flex gap-2 items-center p-2">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M18 8.62111V15C18 16.1046 17.1046 17 16 17H4C2.89543 17 2 16.1046 2 15V8.62111M5.5 6.75C5.5 7.99264 4.49264 9 3.25 9C2.09397 9 1.14157 8.12818 1.01442 7.00615C0.995239 6.83688 1.02176 6.66657 1.06477 6.50173L2.10996 2.49516C2.3397 1.6145 3.13506 1 4.04519 1H15.9548C16.8649 1 17.6603 1.6145 17.89 2.49516L18.9352 6.50173C18.9782 6.66657 19.0048 6.83688 18.9856 7.00615C18.8584 8.12818 17.906 9 16.75 9C15.5074 9 14.5 7.99264 14.5 6.75M5.5 6.75C5.5 7.99264 6.50736 9 7.75 9C8.99264 9 10 7.99264 10 6.75M5.5 6.75L6 1M10 6.75C10 7.99264 11.0074 9 12.25 9C13.4926 9 14.5 7.99264 14.5 6.75M10 6.75V1M14.5 6.75L14 1"
-                                    stroke="#888888" stroke-width="1.4" stroke-linecap="round"
+                                    stroke="#454545" stroke-width="1.4" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                             <p>Product (119)</p>
@@ -150,7 +150,7 @@
                     <!-- Help -->
                     <li
                         class="hover:bg-[#D9EDFF] transition-all duration-100 rounded text-[#888888] hover:text-[#454545] mb-1">
-                        <a href="" class="flex gap-2 items-center p-2">
+                        <a href="./Home.html" class="flex gap-2 items-center p-2">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -264,134 +264,162 @@
 
                 <!-- text -->
                 <div class="mb-6">
-                    <h2 class="text-xl font-bold mb-1">Dashboard</h2>
-                    <p class="text-[#888888] text-xs">Dashboard</p>
-                </div>
-
-                <div class="flex gap-5 justify-between w-full">
-                    <!-- Sales Graph Placeholder -->
-                    <div class="bg-white p-6 rounded-md border border-[#E7E7E7] mb-6 w-full">
-
-                        <!-- header -->
-                        <div class="flex justify-between items-center mb-7">
-                            <h3 class="font-bold">Your Sales this year</h3>
-
-                            <a href="#"
-                                class="flex gap-1 font-semibold text-xs items-center justify-center hover:underline transition-all">
-                                <p>Show All</p>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7" stroke="#020617" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M7 7H17V17" stroke="#020617" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <!-- the graph -->
-                        <div class="h-40 flex items-center justify-center text-gray-500">
-                            <canvas id="salesChart" width="400" height="200" class="bg-white"></canvas>
-                        </div>
-                    </div>
-
-                    <!-- Stats -->
-                    <div class="grid grid-cols-2 gap-4 mb-6 w-full cursor-default">
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Revenue</div>
-                            <div class="text-2xl font-bold">$81.000</div>
-                            <div class="text-[#09DE13] text-sm">▲ 10.6% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Customer</div>
-                            <div class="text-2xl font-bold">5.000</div>
-                            <div class="text-[#FF0000] text-sm">▼ 1.5% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Transactions</div>
-                            <div class="text-2xl font-bold">12.000</div>
-                            <div class="text-[#09DE13] text-sm">▲ 10.6% From last week</div>
-                        </div>
-                        <div
-                            class="bg-white hover:bg-[#C190BD] text-[#C190BD] hover:text-white transition-all duration-200 p-4 rounded flex flex-col justify-between border border-[#E7E7E7] rounded-md">
-                            <div class="text-sm">Total Product</div>
-                            <div class="text-2xl font-bold">5.000</div>
-                            <div class="text-[#FF0000] text-sm">▼ 1.5% From last week</div>
-                        </div>
+                    <h2 class="text-xl font-bold mb-1">Product</h2>
+                    <div class="text-[#888888] text-xs flex gap-2 items-center">
+                        <p>Dashboard</p>
+                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.33366 5.50008L0.666992 0.166748V10.8334L7.33366 5.50008Z" fill="#737373" />
+                        </svg>
+                        <p>Product</p>
+                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.33366 5.50008L0.666992 0.166748V10.8334L7.33366 5.50008Z" fill="#737373" />
+                        </svg>
+                        <p class="text-[#1A71F6] font-semibold">Add Product</p>
                     </div>
                 </div>
 
-                <!-- Product Popular -->
-                <div class="bg-white p-6 rounded-md border border-[#E7E7E7]">
-                    <!-- header -->
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold">Product Popular</h3>
+                <form class="flex gap-4">
 
-                        <a href="#"
-                            class="flex gap-1 font-semibold text-xs items-center justify-center hover:underline transition-all">
-                            <p>Show All</p>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7" stroke="#020617" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M7 7H17V17" stroke="#020617" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
+                    <!-- Product Information -->
+                    <div class="space-y-4 bg-white rounded-md border border-[#E7E7E7] p-4 pb-8 text-sm w-2/3">
+                        <h2 class="text-xl font-bold">Product Information</h2>
+
+                        <!-- SKU -->
+                        <div>
+                            <label class="block text-sm font-medium pb-1">SKU</label>
+                            <input type="text" class="w-full border rounded-md p-2" placeholder="Input no SKU" />
+                        </div>
+
+                        <!-- Product Name -->
+                        <div>
+                            <label class="block text-sm font-medium pb-1">Product Name</label>
+                            <input type="text" class="w-full border rounded-md p-2" placeholder="Input product name" />
+                        </div>
+
+                        <!-- Discription -->
+                        <div>
+                            <label class="block text-sm font-medium pb-1">Discription</label>
+                            <textarea name="" id="" class="w-full border rounded-md p-2"
+                                placeholder="Input product name"></textarea>
+                        </div>
+
+                        <!-- Size + add discount + Color -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium pb-1">Size</label>
+                                <input type="text" class="w-full border rounded-md p-2" placeholder="Input Size" />
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium pb-1">add discount</label>
+                                <input type="text" class="w-full border rounded-md p-2" placeholder="Input Price" />
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium pb-1">Color</label>
+                                <input type="text" class="w-full border rounded-md p-2" placeholder="Color" />
+                            </div>
+
+                        </div>
+
+                        <!-- Product Category + Price -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium pb-1">Product Category</label>
+                                <select class="border rounded-md p-2 w-full">
+                                    <option>section 1</option>
+                                    <option>section 2</option>
+                                    <option>section 3</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium pb-1">Price</label>
+                                <input type="text" class="w-full border rounded-md p-2" placeholder="Input Price" />
+                            </div>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div>
+                            <label class="block text-sm font-medium pb-1">Quantity</label>
+                            <input type="text" class="w-full border rounded-md p-2" placeholder="Input stock" />
+                        </div>
+
+                        <!-- Status Product -->
+                        <div>
+                            <label class="block text-sm font-medium pb-1">Status Product</label>
+                            <select class="border rounded-md p-2 w-full">
+                                <option>Available</option>
+                                <option>Out of Stock</option>
+                            </select>
+                        </div>
+                        
                     </div>
 
-                    <!-- the table -->
-                    <table class="w-full text-left text-sm border-collapse">
-                        <thead>
-                            <tr>
-                                <th class="py-2">Product</th>
-                                <th class="py-2">Price</th>
-                                <th class="py-2">Sales</th>
-                                <th class="py-2">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <!-- Image & Video Upload -->
+                    <div class="space-y-6 bg-white rounded-md border border-[#E7E7E7] p-4 w-1/3">
+                        <!-- Image Upload -->
+                        <div class="bg-white rounded-xl">
+                            <h3 class="font-semibold">Image Product</h3>
+                            <p class="text-xs text-gray-500 mb-2">Note: Format photos SVG, PNG, JPG (max 4MB)</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <!-- Image placeholders -->
+                                <template id="photoTemplate">
+                                    <label
+                                        class="border-2 border-dashed rounded-lg h-24 flex justify-center items-center cursor-pointer bg-blue-50 relative overflow-hidden">
+                                        <input type="file" accept="image/*" class="hidden image-input" />
+                                        <span class="text-xs text-center text-blue-600">Photo</span>
+                                    </label>
+                                </template>
 
-                            <!-- row 1 -->
-                            <tr class="border-t">
-                                <td class="py-4">
-                                    <div class="flex gap-2 items-center">
-                                        <img src="" alt="" class="size-10 rounded-md bg-gray-200 object-cover">
-                                        <div>
-                                            <h1 class="text-[#454545]">12345</h1>
-                                            <p class="text-black break-all text-xs">Product 1</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="py-4">$20.00</td>
-                                <td class="py-4">3000</td>
-                                <td class="py-4"><span
-                                        class="bg-[#B2FFB4] text-[#04910C] text-xs px-2 rounded-md p-1 text-center">Success</span>
-                                </td>
-                            </tr>
+                                <label
+                                    class="image-box relative group border-2 border-dashed rounded-lg h-24 flex justify-center items-center cursor-pointer bg-blue-50 overflow-hidden w-full h-24">
+                                    <input type="file" accept="image/*" class="hidden image-input w-44 h-44"
+                                        onchange="previewImage(this)" />
+                                    <img class="object-cover w-full h-full hidden" />
+                                    <span class="text-xs text-blue-600 absolute group-hover:text-gray-900">Photo 1</span>
+                                </label>
 
-                            <!-- row 2 -->
-                            <tr class="border-t">
-                                <td class="py-4">
-                                    <div class="flex gap-2 items-center">
-                                        <img src="" alt="" class="size-10 rounded-md bg-gray-200 object-cover">
-                                        <div>
-                                            <h1 class="text-[#454545]">67890</h1>
-                                            <p class="text-black break-all text-xs">Product 2</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="py-4">$20.00</td>
-                                <td class="py-4">3000</td>
-                                <td class="py-4"><span
-                                        class="bg-[#B2FFB4] text-[#04910C] text-xs px-2 rounded-md p-1 text-center">Success</span>
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                                <label
+                                    class="image-box relative group border-2 border-dashed rounded-lg h-24 flex justify-center items-center cursor-pointer bg-blue-50 overflow-hidden w-full h-24">
+                                    <input type="file" accept="image/*" class="hidden image-input"
+                                        onchange="previewImage(this)" />
+                                    <img class="object-cover w-full h-full hidden" />
+                                    <span class="text-xs text-blue-600 absolute group-hover:text-gray-900">Photo 2</span>
+                                </label>
+
+                                <label
+                                    class="image-box relative group border-2 border-dashed rounded-lg h-24 flex justify-center items-center cursor-pointer bg-blue-50 overflow-hidden w-full h-24">
+                                    <input type="file" accept="image/*" class="hidden image-input"
+                                        onchange="previewImage(this)" />
+                                    <img class="object-cover w-full h-full hidden" />
+                                    <span class="text-xs text-blue-600 absolute group-hover:text-gray-900">Photo 3</span>
+                                </label>
+
+                                <label
+                                    class="image-box relative group border-2 border-dashed rounded-lg h-24 flex justify-center items-center cursor-pointer bg-blue-50 overflow-hidden w-full h-24">
+                                    <input type="file" accept="image/*" class="hidden image-input"
+                                        onchange="previewImage(this)" />
+                                    <img class="object-cover w-full h-full hidden" />
+                                    <span class="text-xs text-blue-600 absolute group-hover:text-gray-900">Photo 4</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Video Upload -->
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold pb-2">Video Product</h3>
+                            <label
+                                class="border-2 border-dashed bg-blue-50 rounded-lg h-24 flex justify-center items-center cursor-pointer">
+                                <input type="file" accept="video/*" class="hidden" />
+                                <span class="text-sm text-blue-600">video 1</span>
+                            </label>
+                        </div>
+
+                        <!-- Save Button -->
+                        <button type="submit" class="bg-[#1A71F6] text-sm font-semibold text-white px-4 py-2 rounded-lg w-full">Save Product</button>
+                    </div>
+
+                </form>
             </div>
 
 
@@ -450,6 +478,28 @@
             }]
         });
     </script>
+
+    <!-- for show the images -->
+    <script>
+        function previewImage(input) {
+            const file = input.files[0];
+            const label = input.closest('.image-box');
+            const img = label.querySelector('img');
+            const span = label.querySelector('span');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    img.src = e.target.result;
+                    img.classList.remove('hidden');
+                    span.classList.add('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+
 
 </body>
 
