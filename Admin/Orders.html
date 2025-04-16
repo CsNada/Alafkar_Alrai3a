@@ -264,7 +264,7 @@
 
                 <!-- text -->
                 <div class="mb-6">
-                    <h2 class="text-xl font-bold mb-1">Product</h2>
+                    <h2 class="text-xl font-bold mb-1">Orders</h2>
                     <div class="text-[#888888] text-xs flex gap-2 items-center">
                         <p>Dashboard</p>
                         <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -507,58 +507,6 @@
         </div>
 
     </div>
-
-
-    <!-- for the graph-->
-    <script>
-        const ctx = document.getElementById('salesChart').getContext('2d');
-        const salesChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                datasets: [
-                    {
-                        label: 'Average Sale Value',
-                        data: [120, 140, 160, 150, 170, 180, 210, 240, 250, 270, 300, 330],
-                        borderColor: '#a3e635',
-                        backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                        fill: true,
-                        tension: 0.4
-                    },
-                    {
-                        label: 'Average Item per Sale',
-                        data: [90, 100, 110, 105, 120, 130, 150, 160, 180, 200, 210, 230],
-                        borderColor: '#d8b4fe',
-                        backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                        fill: true,
-                        borderDash: [5, 5],
-                        tension: 0.4
-                    }
-                ]
-            },
-            options: {
-                responsive: false,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top'
-                    }
-                }
-
-            },
-            plugins: [{
-                id: 'customCanvasBackgroundColor',
-                beforeDraw: (chart) => {
-                    const ctx = chart.canvas.getContext('2d');
-                    ctx.save();
-                    ctx.globalCompositeOperation = 'destination-over';
-                    ctx.fillStyle = '#ffffff'; // ← لون الخلفية الأبيض
-                    ctx.fillRect(0, 0, chart.width, chart.height);
-                    ctx.restore();
-                }
-            }]
-        });
-    </script>
 
     <!-- for switch between the sections -->
     <script>
